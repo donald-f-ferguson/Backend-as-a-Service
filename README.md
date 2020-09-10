@@ -67,4 +67,6 @@ Final grade is based on the completeness and quality of the project.
 
 ## Course Content
 
-In progress.
+- Lecture 1: Introduction, Overview, Core Concepts:
+    - [Jupyter Notebook](Lectures/Lecture_1/E6156-f2020-Lecture-1.ipynb)
+    - [HTML Format](Lectures/Lecture_1/E6156-f2020-Lecture-1.html)
