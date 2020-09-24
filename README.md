@@ -76,3 +76,10 @@ Final grade is based on the completeness and quality of the project.
     - [Jupyter Notebook](Lectures/Lecture_2/E6156-f2019-Lecture-2.ipynb)
     - [HTML](Lectures/Lecture_2/E6156-f2019-Lecture-2.html)
     - [Reference: RESTful Services in Nutshell](Lectures/Lecture_2/REST-Intro-rev3.pdf)
+    
+
+- Lecture 3: Web Applications, REST, IaaS, CI/CD, Static Web Hosting
+    - [Jupyter Notebook](Lectures/Lecture_3/E6156-f2020-Lecture-3.ipynb)
+    - [HTML](Lectures/Lecture_3/E6156-f2020-Lecture-3.html)
+    - [Reference: RESTful Services in Nutshell](Lectures/Lecture_2/REST-Intro-rev3.pdf)
+    
