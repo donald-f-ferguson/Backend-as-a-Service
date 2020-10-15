@@ -68,18 +68,32 @@ Final grade is based on the completeness and quality of the project.
 ## Course Content
 
 - Lecture 1: Introduction, Overview, Core Concepts:
-    - [Jupyter Notebook](old/Lectures/Lecture_1/E6156-f2020-Lecture-1.ipynb)
-    - [HTML Format](old/Lectures/Lecture_1/E6156-f2020-Lecture-1.html)
+    - [Jupyter Notebook](Lectures/Lecture_1/E6156-f2020-Lecture-1.ipynb)
+    - [HTML Format](Lectures/Lecture_1/E6156-f2020-Lecture-1.html)
     
 
 - Lecture 2: Microservices, API Management, Course Project, REST
-    - [Jupyter Notebook](old/Lectures/Lecture_2/E6156-f2019-Lecture-2.ipynb)
-    - [HTML](old/Lectures/Lecture_2/E6156-f2019-Lecture-2.html)
-    - [Reference: RESTful Services in Nutshell](old/Lectures/Lecture_2/REST-Intro-rev3.pdf)
+    - [Jupyter Notebook](Lectures/Lecture_2/E6156-f2019-Lecture-2.ipynb)
+    - [HTML](Lectures/Lecture_2/E6156-f2019-Lecture-2.html)
+    - [Reference: RESTful Services in Nutshell](Lectures/Lecture_2/REST-Intro-rev3.pdf)
     
 
 - Lecture 3: Web Applications, REST, IaaS, CI/CD, Static Web Hosting
-    - [Jupyter Notebook](old/Lectures/Lecture_3/E6156-f2020-Lecture-3.ipynb)
-    - [HTML](old/Lectures/Lecture_3/E6156-f2020-Lecture-3.html)
-    - [Reference: RESTful Services in Nutshell](old/Lectures/Lecture_2/REST-Intro-rev3.pdf)
+    - [Jupyter Notebook](Lectures/Lecture_3/E6156-f2020-Lecture-3.ipynb)
+    - [HTML](Lectures/Lecture_3/E6156-f2020-Lecture-3.html)
+    - [Reference: RESTful Services in Nutshell](Lectures/Lecture_2/REST-Intro-rev3.pdf)
+    
+    
+- Lecture 4: VMs, IaaS, Containers, REST Continued, DB-as-a-Service
+    - [Jupyter Notebook](Lectures/Lecture_4/E6156-f2019-Lecture-4.ipynb)
+    - [HTML](Lectures/Lecture_4/E6156-f2019-Lecture-4.html)
+    
+    
+- Lecture 5: HATEOAS, Security, Middleware
+    - [Jupyter Notebook](Lectures/Lecture_5/E6156-f2019-Lecture-5.ipynb)
+    - [HTML](Lectures/Lecture_5/E6156-f2019-Lecture-5.html)
+    
+    
+- Lecture 6: DynamoDB, SNS, API Gateway, Lambda Functions
+    - [PPTX](Lectures/Lecture_6/Lecture_6_Dynamo_Lambda_SNS.pptx)
     
