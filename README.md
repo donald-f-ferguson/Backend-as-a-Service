@@ -97,3 +97,7 @@ Final grade is based on the completeness and quality of the project.
 - Lecture 6: DynamoDB, SNS, API Gateway, Lambda Functions
     - [PPTX](Lectures/Lecture_6/Lecture_6_Dynamo_Lambda_SNS.pptx)
     
+    
+- Lecture 7: DynamoDB, SNS, API Gateway, Lambda Functions
+    - [PPTX](Lectures/Lecture_7/Lecture_7_Dynamo_Lambda_SNS_v2.pptx)
+    
