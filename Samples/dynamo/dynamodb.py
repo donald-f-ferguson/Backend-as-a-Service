@@ -35,23 +35,49 @@ def get_item(table_name, key_value):
     return response
 
 
-def do_a_scan(table_name, filterexpression):
+def do_a_scan(table_name, filter_expression=None, expression_attributes=None, projection_expression=None,
+              expression_attribute_names=None):
+
     table = dynamodb.Table(table_name)
 
-    if filterexpression is not None:
-        print("Scan with expression")
-        if filterexpression is not None:
+    if filter_expression is not None and projection_expression is not None:
+        if expression_attribute_names is not None:
             response = table.scan(
-                FilterExpression=filterexpression
+                FilterExpression=filter_expression,
+                ExpressionAttributeValues=expression_attributes,
+                ProjectionAttributes=projection_expression,
+                ExpressionAttributeNames=expression_attribute_names
             )
         else:
-            response = table.scan()
+            response = table.scan(
+                FilterExpression=filter_expression,
+                ExpressionAttributeValues=expression_attributes,
+                ProjectionAttributes=projection_expression)
+    elif filter_expression is not None:
+        if expression_attribute_names is not None:
+            response = table.scan(
+                FilterExpression=filter_expression,
+                ExpressionAttributeValues=expression_attributes,
+                ExpressionAttributeNames=expression_attribute_names
+            )
+        else:
+            response = table.scan(
+                FilterExpression=filter_expression,
+                ExpressionAttributeValues=expression_attributes
+            )
+    elif projection_expression is not None:
+        if expression_attribute_names is not None:
+            response = table.scan(
+                ProjectionExpression=projection_expression,
+                ExpressionAttributeNames=expression_attribute_names
+            )
+        else:
+            response = table.scan(
+                ProjectionExpression=projection_expression
+            )
     else:
-        response = table.scan(
-        )
+        response = table.scan()
 
-    print("Scan succeeded")
-    #print(json.dumps(response, indent=4))
     return response["Items"]
 
 
@@ -124,6 +150,37 @@ def add_comment(email, comment, tags):
     res = put_item("comments", item=item)
 
     return res
+
+
+def find_by_tag(tag):
+    table = dynamodb.Table("comments")
+
+    expressionAttributes = dict()
+    expressionAttributes[":tvalue"] = tag
+    filterExpression = "contains(tags, :tvalue)"
+
+    result = table.scan(FilterExpression=filterExpression,
+                        ExpressionAttributeValues=expressionAttributes)
+    return result
+
+
+def write_comment_if_not_changed(new_comment, old_comment):
+
+    new_version_id = str(uuid.uuid4())
+    new_comment["version_id"] = new_version_id
+
+    old_version_id = old_comment["version_id"]
+
+    table = dynamodb.Table("comments")
+
+    res = table.put_item(
+        Item=new_comment,
+        ConditionExpression="version_id=:old_version_id",
+        ExpressionAttributeValues={":old_version_id": old_version_id}
+    )
+
+    return res
+
 
 
 

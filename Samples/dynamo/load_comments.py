@@ -44,6 +44,10 @@ def scan_all():
     rsp = db.do_a_scan("comments", None)
     print("Scan response = \n", json.dumps(rsp, indent=3, default=str))
 
+def scan_all(table_name):
+    rsp = db.do_a_scan(table_name, None)
+    print("Scan response = \n", json.dumps(rsp, indent=3, default=str))
+
 
 def test_add_response():
     email = "foo@exam.org"
@@ -66,11 +70,23 @@ def test_add_comment():
     res = db.add_comment("dff9", "Everything is awesome?", ["cool", "definitely"])
     print("test_add_comment result = \n", res)
 
-#scan_all()
+def test_put():
+    table_name = "lecture"
+    item = {
+        "lecture_no": "xyz",
+        "message": "Boring",
+        "professor": "Sleepy"
+    }
+    res = db.put_item(table_name, item)
+    print("Put returned ...", res)
+
+#scan_all("comments")
 #load_all()
 #test_add_response()
 
-#scan_all()
+#scan_all("lecture")
 test_filter()
 
 #test_add_comment()
+
+#test_put()

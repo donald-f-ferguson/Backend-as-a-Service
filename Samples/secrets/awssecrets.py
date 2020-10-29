@@ -60,6 +60,7 @@ def get_secret():
 
 try:
     s = get_secret()
+    print(s)
 except Exception as e:
     print("Exception = ", e)
 
