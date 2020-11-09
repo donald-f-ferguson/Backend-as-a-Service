@@ -101,3 +101,11 @@ Final grade is based on the completeness and quality of the project.
 - Lecture 7: DynamoDB, SNS, API Gateway, Lambda Functions
     - [PPTX](Lectures/Lecture_7/Lecture_7_Dynamo_Lambda_SNS_v2.pptx)
     
+    
+- Lecture 8: DynamoDB, SNS, Lambda Functions, REST concepts (continued)
+    - [PPTX](Lectures/Lecture_8/Lecture_8_Dynamo_Lambda_SNS_v2.pptx)
+    
+    
+- Lecture 9: ETags, Asynch, WebHooks, Middleware, REST concepts 
+    - [PPTX](Lectures/Lecture_9/Lecture_9_WebHooks_APIGW_MDP_StepFunctions.pptx)
+    
